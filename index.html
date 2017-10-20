@@ -20,46 +20,127 @@
     link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
     document.getElementsByTagName('head')[0].appendChild(link);
   </script>
+  <style>
+    ul.image-list li {
+      display: inline-block;
+      margin: auto;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .slides section img {
+      border: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    ul.image-list img {
+      height: 150px;
+    }
+
+  </style>
 </head>
 <body>
 <div class="reveal">
   <div class="slides">
+
     <section>
       <h2>Containers</h2>
       <p class="fragment">The Basics</p>
     </section>
     <section>
-      <h2>What is a Container?</section>
-    <section>
-      <h2>Why Use Containers?</section>
-    <section>
-      <h2>Container Types</section>
+      <h2>What is a Container?</h2>
+      <p class="fragment">A container image is a lightweight, stand-alone, executable package of a piece of software which includes everything needed to run it: code, runtime, system tools, system libraries, and settings.</p>
+      <aside class="notes">
+        <ul>
+          <li>Fills the same role as virtual machines</li>
+        </ul>
+      </aside>
+    </section>
     <section>
       <section>
-        <h2>Docker</h2>
+        <h2>Why Use Containers?</h2>
+        <aside class="notes">
+          <ul>
+            <li>Best to compare them to virtual machines</li>
+          </ul>
+        </aside>
       </section>
       <section>
-        <h2>Why Docker?</h2>
-      </section>
-      <section>
-        <h2>Docker Adoption</h2>
+        <h2>Virtual Machines vs Containers</h2>
+        <table>
+          <tr>
+            <td><img src="images/VM@2x.png"></td>
+            <td><img src="images/Container@2x.png"></td>
+          </tr>
+        </table>
+        <p class="fragment">Do One Thing and Do It Well.</p>
+        <aside class="notes">
+          <ul>
+            <li>Hardware virtualization vs OS virtualization</li>
+            <li>Added weight of OS and size of images</li>
+            <li>Direct access to hardware processing</li>
+            <li>Shared bins/libs between apps</li>
+            <li>VMs are fully isolated</li>
+            <li>Unix Philosophy - Do one thing and do it well</li>
+          </ul>
+        </aside>
       </section>
     </section>
+    <section>
+      <h2>Container Types</h2>
+      <ul class="image-list">
+        <li><img src="images/icon-docker.png"><br /> Docker</li>
+        <li><img src="images/icon-rkt.png"><br /> Rkt</li>
+        <li><img src="images/icon-lxc.png"><br /> LXC</li>
+        <li><img src="images/icon-openvz.png"><br /> OpenVZ</li>
+        <li><img src="images/icon-freebsd.png"><br /> FreeBSD Jail</li>
+        <li><img src="images/icon-aix.png"><br />  AIX WPARs</li>
+        <li><img src="images/icon-solaris.png"><br />  Solaris Containers</li>
+      </ul>
+      <aside class="notes">
+        <ul>
+          <li>Docker is not the only option</li>
+        </ul>
+      </aside>
+    </section>
+    <section>
+      <section>
+        <h2>Why Docker?</h2>
+        <img src="images/icon-docker.png">
+      </section>
+      <section>
+        <img src="images/datadog-docker-adoption.png">
+      </section>
+      <section>
+        <img src="images/datadog-docker-usage.png">
+      </section>
+      <section>
+        <img src="images/datadog-docker-technologies.png">
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h2>Docker Terms</h2>
+        <p>Image vs Layer vs Container</p>
+        <img class="fragment" src="images/docker-layers.jpeg" style="height: 500px">
+
+        <aside class="notes">
+          <ul>
+            <li>docker images</li>
+            <li>docker ps --all</li>
+            <li>docker run -i -t ubuntu:16.04 /bin/bash</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
+
     <section>
       <h2>Docker Terms</h2>
       <p>Registry vs Repository</p>
-      <p>Image vs Layer vs Container</p>
     </section>
-    <section>
-      <h2>Layers</h2>
-    </section>
-    <section>
-      <h2>Examples</h2>
-      <p>Start Container</p>
-      <p>Add To Container</p>
-      <p>Build a Image</p>
-      <p>Dockerfile</p>
-    </section>
+
   </div>
 </div>
 
