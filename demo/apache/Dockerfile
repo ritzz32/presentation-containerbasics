@@ -3,8 +3,8 @@
 ###########################################
 # Base image is Ubuntu
 FROM ubuntu:16.04
-# Author: Dr. Peter
-MAINTAINER Dr. Peter <peterindia@gmail.com>
+# Author: Tom George
+MAINTAINER Tom George <ritzz32@gmail.com>
 # Install apache2 package
 RUN apt-get update && \
     apt-get install -y apache2 && \

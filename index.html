@@ -131,7 +131,25 @@
             <li>docker images</li>
             <li>docker ps --all</li>
             <li>docker run -i -t ubuntu:16.04 /bin/bash</li>
-            <li>apt update && apt install curl</li>
+            <li>apt update</li>
+            <li>apt-get install -y apache2</li>
+            <li>docker inspect container_name</li>
+            <li>service apache2 start</li>
+            <li>docker commit container_name tgeorge/apache-manual</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Dockerfile</h2>
+        <p>All the manual stuff, but repeatable</p>
+
+        <aside class="notes">
+          <ul>
+            <li>less apache2/Dockerfile</li>
+            <li>docker build -t tgeorge/apache-auto:latest apache</li>
+            <li>docker run -d -P tgeorge/apache-</li>
+            <li>docker stop $(docker ps -q)</li>
+            <li>docker rm $(docker pa -a -q)</li>
           </ul>
         </aside>
       </section>
