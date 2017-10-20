@@ -146,8 +146,9 @@
         <aside class="notes">
           <ul>
             <li>less apache2/Dockerfile</li>
-            <li>docker build -t tgeorge/apache-auto:latest apache</li>
-            <li>docker run -d -P tgeorge/apache-</li>
+            <li>docker build -t tgeorge/apache-auto apache/</li>
+            <li>docker build -t tgeorge/apache-auto:0.1.0 apache/</li>
+            <li>docker run -d -P tgeorge/apache-auto</li>
             <li>docker stop $(docker ps -q)</li>
             <li>docker rm $(docker pa -a -q)</li>
           </ul>
