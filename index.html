@@ -21,6 +21,10 @@
     document.getElementsByTagName('head')[0].appendChild(link);
   </script>
   <style>
+    ul.image-list {
+      text-align: center;
+    }
+
     ul.image-list li {
       display: inline-block;
       margin: auto;
@@ -125,6 +129,7 @@
         <h2>Docker Terms</h2>
         <p>Image vs Layer vs Container</p>
         <img class="fragment" src="images/docker-layers.jpeg" style="height: 500px">
+        <p class="fragment">With a Demo!</p>
 
         <aside class="notes">
           <ul>
@@ -136,6 +141,7 @@
             <li>docker inspect container_name</li>
             <li>service apache2 start</li>
             <li>docker commit container_name tgeorge/apache-manual</li>
+            <li>docker history tgeorge/apache-manual</li>
           </ul>
         </aside>
       </section>
@@ -157,8 +163,45 @@
     </section>
 
     <section>
-      <h2>Docker Terms</h2>
-      <p>Registry vs Repository</p>
+      <section>
+        <h2>Why haven't we jumped in?</h2>
+        <ul class="fragment">
+          <li style="color: green">Security</li>
+          <li>Service Linking (Discovery)</li>
+          <li>Service Monitoring</li>
+          <li>VM <-> Container communication</li>
+          <li style="color: yellow">Security</li>
+          <li>Build Pipelines</li>
+          <li>Scheduling</li>
+          <li>Logging</li>
+          <li style="color: red">Security</li>
+        </ul>
+      </section>
+      <section>
+        <img src="images/enterprise-vs-startup-journey-to-cloud.png" style="height: 600px">
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h2>Orchestrators</h2>
+        <ul class="image-list">
+          <li><img src="images/icon-dockercompose.png"><br /> Docker Compose</li>
+          <li><img src="images/icon-dockerswarm.png"><br /> Docker Swarm</li>
+          <li><img src="images/icon-kubernetes.png"><br /> Kubernetes</li>
+          <li><img src="images/icon-mesos.svg"><br /> Mesos</li>
+          <li><img src="images/icon-marathon.png"><br /> Marathon</li>
+          <li><img src="images/icon-nomad.png"><br /> Nomad</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Cloud Orchestrators</h2>
+        <ul class="image-list">
+          <li><img src="images/icon-amazonecs.png"><br /> Amazon ECS</li>
+          <li><img src="images/icon-googlecloud.png"><br /> Google Cloud</li>
+          <li><img src="images/icon-azurecontainerservice.png"><br /> Azure Container Service</li>
+        </ul>
+      </section>
     </section>
 
   </div>
